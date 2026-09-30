@@ -466,10 +466,10 @@ html{scroll-padding-top:72px;}
   <div class="nav-logo">⬡ SCM ATLAS <span>Supply Chain Learning Hub</span></div>
   <div class="nav-links">
     <a href="#primer">Start Here</a>
-    <a href="#compare">Compare</a>
     <a href="#modules">Modules</a>
     <a href="#process">Process</a>
     <a href="#scm-map">SCM Map</a>
+    <a href="#compare">Compare</a>
     <a href="#transportation">Transportation</a>
     <a href="#casestudies">Cases</a>
     <a href="#cheatsheets">Cheat Sheets</a>
@@ -490,10 +490,10 @@ html{scroll-padding-top:72px;}
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#primer" onclick="closeMobileMenu()">Start Here</a>
-  <a href="#compare" onclick="closeMobileMenu()">Compare</a>
   <a href="#modules" onclick="closeMobileMenu()">Modules</a>
   <a href="#process" onclick="closeMobileMenu()">Process</a>
   <a href="#scm-map" onclick="closeMobileMenu()">SCM Map</a>
+  <a href="#compare" onclick="closeMobileMenu()">Compare</a>
   <a href="#transportation" onclick="closeMobileMenu()">Transportation</a>
   <a href="#casestudies" onclick="closeMobileMenu()">Cases</a>
   <a href="#cheatsheets" onclick="closeMobileMenu()">Cheat Sheets</a>
@@ -770,75 +770,6 @@ html{scroll-padding-top:72px;}
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- COMPARE & CONNECT -->
-<section id="compare" style="background:var(--navy2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="section-header">
-    <div class="section-eyebrow">Start Here · Compare</div>
-    <div class="section-title">SCM vs Logistics vs Warehouse vs E-Commerce</div>
-    <div class="section-sub">What each one is, where it ends, why people confuse them, and how they plug into each other.</div>
-  </div>
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('dm-table',event)">Side-by-Side</button>
-    <button class="tab-btn" onclick="switchTab('dm-pairs',event)">Commonly Confused</button>
-    <button class="tab-btn" onclick="switchTab('dm-links',event)">How They Connect</button>
-  </div>
-
-  <div id="dm-table" class="tab-panel active">
-    <div class="info-box" style="border-left-color:var(--blue);margin-bottom:20px;">
-      <strong style="color:var(--blue);">THE SHORT VERSION</strong>
-      SCM is the whole game plan. Logistics is the part that moves and stores goods. Warehousing and transportation are the two biggest pieces of logistics. E-commerce is not a supply chain function at all: it is a sales channel that generates demand for all of them.
-    </div>
-    <div style="overflow-x:auto;">
-    <table class="inco-table">
-      <thead><tr><th>Domain</th><th>Core Question</th><th>Scope &amp; What It Manages</th><th>Key KPIs</th></tr></thead>
-      <tbody>
-        <tr><td><strong>SCM</strong></td><td>How do we deliver the right product, at the right cost and time, end to end?</td><td>The whole system: plan, source, make, deliver, return. Coordinates partners and trade-offs.</td><td>Perfect order rate, cash-to-cash cycle, total supply chain cost</td></tr>
-        <tr><td><strong>Procurement &amp; Sourcing</strong></td><td>Who do we buy from, and on what terms?</td><td>Upstream. Supplier selection, contracts, POs, supplier performance.</td><td>Savings %, supplier OTIF, PO cycle time</td></tr>
-        <tr><td><strong>Planning (S&amp;OP)</strong></td><td>What will customers want, and what must be ready?</td><td>Forecasts, capacity and replenishment plans. No physical handling.</td><td>Forecast accuracy, bias</td></tr>
-        <tr><td><strong>Manufacturing</strong></td><td>How do we make it to spec, efficiently?</td><td>Inside the factory gate: raw material to finished goods.</td><td>OEE, yield, schedule adherence</td></tr>
-        <tr><td><strong>Inventory Mgmt</strong></td><td>How much do we hold, of what, and where?</td><td>The stock itself (quantity, value, health), not the building.</td><td>Inventory turns, days on hand, stock accuracy</td></tr>
-        <tr><td><strong>Warehousing</strong></td><td>How do we receive, store, pick, pack and ship?</td><td>Inside the four walls: space, labour, putaway, picking, dispatch.</td><td>Order accuracy, picks/hour, dock-to-stock time</td></tr>
-        <tr><td><strong>Transportation</strong></td><td>Which mode, carrier and route?</td><td>Movement between points: booking, routing, tracking, freight cost.</td><td>On-time delivery, cost per kg/unit, damage rate</td></tr>
-        <tr><td><strong>Logistics</strong></td><td>How do goods and information move and rest between origin and customer?</td><td>A subset of SCM: transportation + warehousing + inventory positioning + packaging, often customs too.</td><td>Logistics cost % of sales, OTIF, order cycle time</td></tr>
-        <tr><td><strong>Customs &amp; Trade Compliance</strong></td><td>May this cross the border, and what do we owe?</td><td>Regulatory layer for cross-border flows only: HS codes, duty, licences, documents.</td><td>Clearance time, duty accuracy, penalties</td></tr>
-        <tr><td><strong>E-commerce</strong></td><td>How do customers find, choose and pay online?</td><td>A sales channel, not an SCM function: storefront, checkout, delivery promise. It pushes demand into everything above.</td><td>Conversion, delivery-promise adherence, return rate</td></tr>
-        <tr><td><strong>Returns (Reverse Logistics)</strong></td><td>What happens to products that come back?</td><td>Customer back to vendor, resale or disposal: RMA, inspection, restock, refund.</td><td>Return rate, processing time, recovery value</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-
-  <div id="dm-pairs" class="tab-panel">
-    <div class="cheat-grid">
-      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">SCM vs Logistics</div><div class="cheat-header-tag">Scope</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">SCM</div><div class="term-def">The whole system: planning, sourcing, making, delivering, returning.</div></div><div class="term-row"><div class="term-abbr">Logistics</div><div class="term-def">One part of it: moving and storing goods between origin and consumption.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">SCM decides what to buy, make and where to hold it. Logistics carries it out.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Dual-sourcing a part from two countries is SCM. Booking its sea freight is logistics.</div></div></div></div>
-      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Logistics vs Transportation</div><div class="cheat-header-tag">Scope</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Logistics</div><div class="term-def">Transport + warehousing + inventory positioning + packaging + information.</div></div><div class="term-row"><div class="term-abbr">Transport</div><div class="term-def">Only the movement: mode, carrier, route.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">Every transport decision is a logistics decision, but not the reverse.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Ocean vs air is transportation. Holding safety stock nearby so ocean is safe is logistics.</div></div></div></div>
-      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Warehousing vs Inventory</div><div class="cheat-header-tag">Where vs What</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Warehousing</div><div class="term-def">The place and its operations: receiving, storage, pick, pack, dispatch.</div></div><div class="term-row"><div class="term-abbr">Inventory</div><div class="term-def">The stock: how much, when to reorder, what is ageing.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">Warehouse = where. Inventory = what and how much.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Reslotting fast movers near dispatch is warehousing. Raising safety stock on a volatile SKU is inventory.</div></div></div></div>
-      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Warehouse vs DC vs Fulfilment Centre</div><div class="cheat-header-tag">Facility Type</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Warehouse</div><div class="term-def">General storage, longer holding, bulk in and out.</div></div><div class="term-row"><div class="term-abbr">Dist. Centre</div><div class="term-def">High throughput: consolidates many suppliers, ships pallets and cases to stores or customers.</div></div><div class="term-row"><div class="term-abbr">Fulfil. Centre</div><div class="term-def">Built for single customer orders: each-picking and parcels, typical for e-commerce.</div></div><div class="term-row"><div class="term-abbr">Cross-dock</div><div class="term-def">No storage: inbound is moved to outbound within hours.</div></div></div></div>
-      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">E-commerce vs SCM</div><div class="cheat-header-tag">Front vs Back</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">E-commerce</div><div class="term-def">The front end: where demand is created and captured.</div></div><div class="term-row"><div class="term-abbr">SCM</div><div class="term-def">The engine behind it that must deliver what checkout promised.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">E-commerce makes the promise. SCM keeps it.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">A free 2-day delivery banner is e-commerce. The stock placement and carrier SLAs behind it are SCM.</div></div></div></div>
-    </div>
-  </div>
-
-  <div id="dm-links" class="tab-panel">
-    <div class="info-box" style="border-left-color:var(--teal);margin-bottom:6px;">
-      <strong style="color:var(--teal);">ONE ORDER, START TO FINISH</strong>
-      Plan → Procure → Make → Ship in and clear customs → Warehouse and stock → Customer orders online → Pick and pack → Deliver → Return → the result feeds the next plan. Pick a domain to see what it receives and what it hands on.
-    </div>
-    <div class="leg-rail" id="dmRail">
-        <button class="leg-chip active" onclick="dmPick('plan',this)"><span class="cn">01</span>Planning</button>
-        <button class="leg-chip" onclick="dmPick('proc',this)"><span class="cn">02</span>Procurement</button>
-        <button class="leg-chip" onclick="dmPick('mfg',this)"><span class="cn">03</span>Manufacturing</button>
-        <button class="leg-chip" onclick="dmPick('inv',this)"><span class="cn">04</span>Inventory</button>
-        <button class="leg-chip" onclick="dmPick('wh',this)"><span class="cn">05</span>Warehousing</button>
-        <button class="leg-chip" onclick="dmPick('trans',this)"><span class="cn">06</span>Transportation</button>
-        <button class="leg-chip" onclick="dmPick('cust',this)"><span class="cn">07</span>Customs</button>
-        <button class="leg-chip" onclick="dmPick('ecom',this)"><span class="cn">08</span>E-commerce</button>
-        <button class="leg-chip" onclick="dmPick('ret',this)"><span class="cn">09</span>Returns</button>
-    </div>
-    <div class="leg-detail" id="dmOut"></div>
-    <div class="info-box" style="margin-top:16px;"><strong>WHERE LOGISTICS SITS</strong>Logistics is the middle of that chain: inventory, warehousing, transportation and (for cross-border) customs. Planning, procurement and manufacturing sit upstream of it; e-commerce and returns sit at the customer end.</div>
   </div>
 </section>
 
@@ -1257,6 +1188,75 @@ html{scroll-padding-top:72px;}
   <div class="map-tooltip-title" id="tipTitle"></div>
   <div class="map-tooltip-body" id="tipBody"></div>
 </div>
+
+<!-- COMPARE & CONNECT -->
+<section id="compare" style="background:var(--navy);">
+  <div class="section-header">
+    <div class="section-eyebrow">Start Here · Compare</div>
+    <div class="section-title">SCM vs Logistics vs Warehouse vs E-Commerce</div>
+    <div class="section-sub">What each one is, where it ends, why people confuse them, and how they plug into each other.</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('dm-table',event)">Side-by-Side</button>
+    <button class="tab-btn" onclick="switchTab('dm-pairs',event)">Commonly Confused</button>
+    <button class="tab-btn" onclick="switchTab('dm-links',event)">How They Connect</button>
+  </div>
+
+  <div id="dm-table" class="tab-panel active">
+    <div class="info-box" style="border-left-color:var(--blue);margin-bottom:20px;">
+      <strong style="color:var(--blue);">THE SHORT VERSION</strong>
+      SCM is the whole game plan. Logistics is the part that moves and stores goods. Warehousing and transportation are the two biggest pieces of logistics. E-commerce is not a supply chain function at all: it is a sales channel that generates demand for all of them.
+    </div>
+    <div style="overflow-x:auto;">
+    <table class="inco-table">
+      <thead><tr><th>Domain</th><th>Core Question</th><th>Scope &amp; What It Manages</th><th>Key KPIs</th></tr></thead>
+      <tbody>
+        <tr><td><strong>SCM</strong></td><td>How do we deliver the right product, at the right cost and time, end to end?</td><td>The whole system: plan, source, make, deliver, return. Coordinates partners and trade-offs.</td><td>Perfect order rate, cash-to-cash cycle, total supply chain cost</td></tr>
+        <tr><td><strong>Procurement &amp; Sourcing</strong></td><td>Who do we buy from, and on what terms?</td><td>Upstream. Supplier selection, contracts, POs, supplier performance.</td><td>Savings %, supplier OTIF, PO cycle time</td></tr>
+        <tr><td><strong>Planning (S&amp;OP)</strong></td><td>What will customers want, and what must be ready?</td><td>Forecasts, capacity and replenishment plans. No physical handling.</td><td>Forecast accuracy, bias</td></tr>
+        <tr><td><strong>Manufacturing</strong></td><td>How do we make it to spec, efficiently?</td><td>Inside the factory gate: raw material to finished goods.</td><td>OEE, yield, schedule adherence</td></tr>
+        <tr><td><strong>Inventory Mgmt</strong></td><td>How much do we hold, of what, and where?</td><td>The stock itself (quantity, value, health), not the building.</td><td>Inventory turns, days on hand, stock accuracy</td></tr>
+        <tr><td><strong>Warehousing</strong></td><td>How do we receive, store, pick, pack and ship?</td><td>Inside the four walls: space, labour, putaway, picking, dispatch.</td><td>Order accuracy, picks/hour, dock-to-stock time</td></tr>
+        <tr><td><strong>Transportation</strong></td><td>Which mode, carrier and route?</td><td>Movement between points: booking, routing, tracking, freight cost.</td><td>On-time delivery, cost per kg/unit, damage rate</td></tr>
+        <tr><td><strong>Logistics</strong></td><td>How do goods and information move and rest between origin and customer?</td><td>A subset of SCM: transportation + warehousing + inventory positioning + packaging, often customs too.</td><td>Logistics cost % of sales, OTIF, order cycle time</td></tr>
+        <tr><td><strong>Customs &amp; Trade Compliance</strong></td><td>May this cross the border, and what do we owe?</td><td>Regulatory layer for cross-border flows only: HS codes, duty, licences, documents.</td><td>Clearance time, duty accuracy, penalties</td></tr>
+        <tr><td><strong>E-commerce</strong></td><td>How do customers find, choose and pay online?</td><td>A sales channel, not an SCM function: storefront, checkout, delivery promise. It pushes demand into everything above.</td><td>Conversion, delivery-promise adherence, return rate</td></tr>
+        <tr><td><strong>Returns (Reverse Logistics)</strong></td><td>What happens to products that come back?</td><td>Customer back to vendor, resale or disposal: RMA, inspection, restock, refund.</td><td>Return rate, processing time, recovery value</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div id="dm-pairs" class="tab-panel">
+    <div class="cheat-grid">
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">SCM vs Logistics</div><div class="cheat-header-tag">Scope</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">SCM</div><div class="term-def">The whole system: planning, sourcing, making, delivering, returning.</div></div><div class="term-row"><div class="term-abbr">Logistics</div><div class="term-def">One part of it: moving and storing goods between origin and consumption.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">SCM decides what to buy, make and where to hold it. Logistics carries it out.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Dual-sourcing a part from two countries is SCM. Booking its sea freight is logistics.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Logistics vs Transportation</div><div class="cheat-header-tag">Scope</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Logistics</div><div class="term-def">Transport + warehousing + inventory positioning + packaging + information.</div></div><div class="term-row"><div class="term-abbr">Transport</div><div class="term-def">Only the movement: mode, carrier, route.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">Every transport decision is a logistics decision, but not the reverse.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Ocean vs air is transportation. Holding safety stock nearby so ocean is safe is logistics.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Warehousing vs Inventory</div><div class="cheat-header-tag">Where vs What</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Warehousing</div><div class="term-def">The place and its operations: receiving, storage, pick, pack, dispatch.</div></div><div class="term-row"><div class="term-abbr">Inventory</div><div class="term-def">The stock: how much, when to reorder, what is ageing.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">Warehouse = where. Inventory = what and how much.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Reslotting fast movers near dispatch is warehousing. Raising safety stock on a volatile SKU is inventory.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Warehouse vs DC vs Fulfilment Centre</div><div class="cheat-header-tag">Facility Type</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Warehouse</div><div class="term-def">General storage, longer holding, bulk in and out.</div></div><div class="term-row"><div class="term-abbr">Dist. Centre</div><div class="term-def">High throughput: consolidates many suppliers, ships pallets and cases to stores or customers.</div></div><div class="term-row"><div class="term-abbr">Fulfil. Centre</div><div class="term-def">Built for single customer orders: each-picking and parcels, typical for e-commerce.</div></div><div class="term-row"><div class="term-abbr">Cross-dock</div><div class="term-def">No storage: inbound is moved to outbound within hours.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">E-commerce vs SCM</div><div class="cheat-header-tag">Front vs Back</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">E-commerce</div><div class="term-def">The front end: where demand is created and captured.</div></div><div class="term-row"><div class="term-abbr">SCM</div><div class="term-def">The engine behind it that must deliver what checkout promised.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">E-commerce makes the promise. SCM keeps it.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">A free 2-day delivery banner is e-commerce. The stock placement and carrier SLAs behind it are SCM.</div></div></div></div>
+    </div>
+  </div>
+
+  <div id="dm-links" class="tab-panel">
+    <div class="info-box" style="border-left-color:var(--teal);margin-bottom:6px;">
+      <strong style="color:var(--teal);">ONE ORDER, START TO FINISH</strong>
+      Plan → Procure → Make → Ship in and clear customs → Warehouse and stock → Customer orders online → Pick and pack → Deliver → Return → the result feeds the next plan. Pick a domain to see what it receives and what it hands on.
+    </div>
+    <div class="leg-rail" id="dmRail">
+        <button class="leg-chip active" onclick="dmPick('plan',this)"><span class="cn">01</span>Planning</button>
+        <button class="leg-chip" onclick="dmPick('proc',this)"><span class="cn">02</span>Procurement</button>
+        <button class="leg-chip" onclick="dmPick('mfg',this)"><span class="cn">03</span>Manufacturing</button>
+        <button class="leg-chip" onclick="dmPick('inv',this)"><span class="cn">04</span>Inventory</button>
+        <button class="leg-chip" onclick="dmPick('wh',this)"><span class="cn">05</span>Warehousing</button>
+        <button class="leg-chip" onclick="dmPick('trans',this)"><span class="cn">06</span>Transportation</button>
+        <button class="leg-chip" onclick="dmPick('cust',this)"><span class="cn">07</span>Customs</button>
+        <button class="leg-chip" onclick="dmPick('ecom',this)"><span class="cn">08</span>E-commerce</button>
+        <button class="leg-chip" onclick="dmPick('ret',this)"><span class="cn">09</span>Returns</button>
+    </div>
+    <div class="leg-detail" id="dmOut"></div>
+    <div class="info-box" style="margin-top:16px;"><strong>WHERE LOGISTICS SITS</strong>Logistics is the middle of that chain: inventory, warehousing, transportation and (for cross-border) customs. Planning, procurement and manufacturing sit upstream of it; e-commerce and returns sit at the customer end.</div>
+  </div>
+</section>
 
 <!-- CASE STUDIES -->
 <section id="casestudies" style="background:var(--navy2);">
