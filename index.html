@@ -14,11 +14,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="author" content="Harsha Kalluri"/>
 <meta name="copyright" content="© 2025–2026 Harsha Kalluri. All Rights Reserved."/>
-<meta name="description" content="SCM Atlas — Supply Chain Learning Hub, created by Harsha Kalluri. Free supply chain education, frameworks, case studies, cheat sheets, KPIs and interview preparation."/>
-<meta name="creator" content="Harsha Kalluri"/>
-<meta property="og:title" content="SCM Atlas — Supply Chain Learning Hub | Harsha Kalluri"/>
-<meta property="og:description" content="A free, interactive supply chain learning platform created by Harsha Kalluri."/>
-<meta property="og:type" content="website"/>
 <title>SCM Atlas — Supply Chain Learning Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -276,7 +271,7 @@ footer{background:var(--navy2);border-top:1px solid var(--border);padding:40px 6
 .tmpl-card-footer{display:flex;gap:8px;padding:14px 22px;border-top:1px solid var(--border);background:rgba(0,0,0,.15);}
 .tmpl-btn-preview{flex:1;font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:8px 12px;border-radius:4px;cursor:pointer;transition:.2s;border:1px solid var(--border);background:transparent;color:var(--text2);}
 .tmpl-btn-preview:hover{border-color:var(--amber);color:var(--amber);}
-.tmpl-btn-dl{display:none;flex:1;font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:8px 12px;border-radius:4px;cursor:pointer;transition:.2s;border:none;background:var(--amber);color:var(--navy);}
+.tmpl-btn-dl{flex:1;font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:8px 12px;border-radius:4px;cursor:pointer;transition:.2s;border:none;background:var(--amber);color:var(--navy);}
 .tmpl-btn-dl:hover{background:var(--amber2);}
 .tmpl-preview-overlay{position:fixed;inset:0;background:rgba(5,8,18,.95);z-index:300;display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto;opacity:0;pointer-events:none;transition:.3s;}
 .tmpl-preview-overlay.active{opacity:1;pointer-events:all;}
@@ -453,6 +448,15 @@ html{scroll-padding-top:72px;}
   footer{flex-direction:column;gap:12px;text-align:center;padding:32px 24px;}
   .map-tooltip{display:none;}
 }
+
+/* COMPARE & CONNECT */
+.dm-card .term-abbr{min-width:104px;}
+.dm-lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px;}
+.dm-lists .k{font-family:var(--mono);font-size:9px;color:var(--amber);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.dm-lists ul{list-style:none;}
+.dm-lists li{font-size:12px;color:var(--text2);line-height:1.55;padding:6px 0;border-bottom:1px solid rgba(37,48,80,.5);}
+.dm-lists li:last-child{border-bottom:none;}
+.dm-lists li strong{color:var(--text);}
 </style>
 </head>
 <body>
@@ -462,6 +466,7 @@ html{scroll-padding-top:72px;}
   <div class="nav-logo">⬡ SCM ATLAS <span>Supply Chain Learning Hub</span></div>
   <div class="nav-links">
     <a href="#primer">Start Here</a>
+    <a href="#compare">Compare</a>
     <a href="#modules">Modules</a>
     <a href="#process">Process</a>
     <a href="#scm-map">SCM Map</a>
@@ -485,6 +490,7 @@ html{scroll-padding-top:72px;}
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#primer" onclick="closeMobileMenu()">Start Here</a>
+  <a href="#compare" onclick="closeMobileMenu()">Compare</a>
   <a href="#modules" onclick="closeMobileMenu()">Modules</a>
   <a href="#process" onclick="closeMobileMenu()">Process</a>
   <a href="#scm-map" onclick="closeMobileMenu()">SCM Map</a>
@@ -523,7 +529,7 @@ html{scroll-padding-top:72px;}
     </svg>
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow animate-in">The Complete SCM Learning Platform</div><div style="font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:.08em;text-transform:uppercase;margin-top:18px;">Created & Curated by <span style="color:var(--amber);font-weight:700;">Harsha Kalluri</span> · © 2025–2026 · All Rights Reserved</div>
+    <div class="hero-eyebrow animate-in">The Complete SCM Learning Platform</div>
     <h1 class="animate-in delay-1">MASTER<br/><em>SUPPLY CHAIN</em><br/>END TO END</h1>
     <p class="hero-desc animate-in delay-2">From raw material sourcing to last-mile delivery — every concept, framework, cheat sheet, and real-world case study you need to master global supply chain management. Free, forever.</p>
     <div class="hero-stats animate-in delay-3">
@@ -764,6 +770,75 @@ html{scroll-padding-top:72px;}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- COMPARE & CONNECT -->
+<section id="compare" style="background:var(--navy2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-header">
+    <div class="section-eyebrow">Start Here · Compare</div>
+    <div class="section-title">SCM vs Logistics vs Warehouse vs E-Commerce</div>
+    <div class="section-sub">What each one is, where it ends, why people confuse them, and how they plug into each other.</div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('dm-table',event)">Side-by-Side</button>
+    <button class="tab-btn" onclick="switchTab('dm-pairs',event)">Commonly Confused</button>
+    <button class="tab-btn" onclick="switchTab('dm-links',event)">How They Connect</button>
+  </div>
+
+  <div id="dm-table" class="tab-panel active">
+    <div class="info-box" style="border-left-color:var(--blue);margin-bottom:20px;">
+      <strong style="color:var(--blue);">THE SHORT VERSION</strong>
+      SCM is the whole game plan. Logistics is the part that moves and stores goods. Warehousing and transportation are the two biggest pieces of logistics. E-commerce is not a supply chain function at all: it is a sales channel that generates demand for all of them.
+    </div>
+    <div style="overflow-x:auto;">
+    <table class="inco-table">
+      <thead><tr><th>Domain</th><th>Core Question</th><th>Scope &amp; What It Manages</th><th>Key KPIs</th></tr></thead>
+      <tbody>
+        <tr><td><strong>SCM</strong></td><td>How do we deliver the right product, at the right cost and time, end to end?</td><td>The whole system: plan, source, make, deliver, return. Coordinates partners and trade-offs.</td><td>Perfect order rate, cash-to-cash cycle, total supply chain cost</td></tr>
+        <tr><td><strong>Procurement &amp; Sourcing</strong></td><td>Who do we buy from, and on what terms?</td><td>Upstream. Supplier selection, contracts, POs, supplier performance.</td><td>Savings %, supplier OTIF, PO cycle time</td></tr>
+        <tr><td><strong>Planning (S&amp;OP)</strong></td><td>What will customers want, and what must be ready?</td><td>Forecasts, capacity and replenishment plans. No physical handling.</td><td>Forecast accuracy, bias</td></tr>
+        <tr><td><strong>Manufacturing</strong></td><td>How do we make it to spec, efficiently?</td><td>Inside the factory gate: raw material to finished goods.</td><td>OEE, yield, schedule adherence</td></tr>
+        <tr><td><strong>Inventory Mgmt</strong></td><td>How much do we hold, of what, and where?</td><td>The stock itself (quantity, value, health), not the building.</td><td>Inventory turns, days on hand, stock accuracy</td></tr>
+        <tr><td><strong>Warehousing</strong></td><td>How do we receive, store, pick, pack and ship?</td><td>Inside the four walls: space, labour, putaway, picking, dispatch.</td><td>Order accuracy, picks/hour, dock-to-stock time</td></tr>
+        <tr><td><strong>Transportation</strong></td><td>Which mode, carrier and route?</td><td>Movement between points: booking, routing, tracking, freight cost.</td><td>On-time delivery, cost per kg/unit, damage rate</td></tr>
+        <tr><td><strong>Logistics</strong></td><td>How do goods and information move and rest between origin and customer?</td><td>A subset of SCM: transportation + warehousing + inventory positioning + packaging, often customs too.</td><td>Logistics cost % of sales, OTIF, order cycle time</td></tr>
+        <tr><td><strong>Customs &amp; Trade Compliance</strong></td><td>May this cross the border, and what do we owe?</td><td>Regulatory layer for cross-border flows only: HS codes, duty, licences, documents.</td><td>Clearance time, duty accuracy, penalties</td></tr>
+        <tr><td><strong>E-commerce</strong></td><td>How do customers find, choose and pay online?</td><td>A sales channel, not an SCM function: storefront, checkout, delivery promise. It pushes demand into everything above.</td><td>Conversion, delivery-promise adherence, return rate</td></tr>
+        <tr><td><strong>Returns (Reverse Logistics)</strong></td><td>What happens to products that come back?</td><td>Customer back to vendor, resale or disposal: RMA, inspection, restock, refund.</td><td>Return rate, processing time, recovery value</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div id="dm-pairs" class="tab-panel">
+    <div class="cheat-grid">
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">SCM vs Logistics</div><div class="cheat-header-tag">Scope</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">SCM</div><div class="term-def">The whole system: planning, sourcing, making, delivering, returning.</div></div><div class="term-row"><div class="term-abbr">Logistics</div><div class="term-def">One part of it: moving and storing goods between origin and consumption.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">SCM decides what to buy, make and where to hold it. Logistics carries it out.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Dual-sourcing a part from two countries is SCM. Booking its sea freight is logistics.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Logistics vs Transportation</div><div class="cheat-header-tag">Scope</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Logistics</div><div class="term-def">Transport + warehousing + inventory positioning + packaging + information.</div></div><div class="term-row"><div class="term-abbr">Transport</div><div class="term-def">Only the movement: mode, carrier, route.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">Every transport decision is a logistics decision, but not the reverse.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Ocean vs air is transportation. Holding safety stock nearby so ocean is safe is logistics.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Warehousing vs Inventory</div><div class="cheat-header-tag">Where vs What</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Warehousing</div><div class="term-def">The place and its operations: receiving, storage, pick, pack, dispatch.</div></div><div class="term-row"><div class="term-abbr">Inventory</div><div class="term-def">The stock: how much, when to reorder, what is ageing.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">Warehouse = where. Inventory = what and how much.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">Reslotting fast movers near dispatch is warehousing. Raising safety stock on a volatile SKU is inventory.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">Warehouse vs DC vs Fulfilment Centre</div><div class="cheat-header-tag">Facility Type</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">Warehouse</div><div class="term-def">General storage, longer holding, bulk in and out.</div></div><div class="term-row"><div class="term-abbr">Dist. Centre</div><div class="term-def">High throughput: consolidates many suppliers, ships pallets and cases to stores or customers.</div></div><div class="term-row"><div class="term-abbr">Fulfil. Centre</div><div class="term-def">Built for single customer orders: each-picking and parcels, typical for e-commerce.</div></div><div class="term-row"><div class="term-abbr">Cross-dock</div><div class="term-def">No storage: inbound is moved to outbound within hours.</div></div></div></div>
+      <div class="cheat-card dm-card"><div class="cheat-header"><div class="cheat-header-title">E-commerce vs SCM</div><div class="cheat-header-tag">Front vs Back</div></div><div class="cheat-body"><div class="term-row"><div class="term-abbr">E-commerce</div><div class="term-def">The front end: where demand is created and captured.</div></div><div class="term-row"><div class="term-abbr">SCM</div><div class="term-def">The engine behind it that must deliver what checkout promised.</div></div><div class="term-row"><div class="term-abbr">Rule</div><div class="term-def">E-commerce makes the promise. SCM keeps it.</div></div><div class="term-row"><div class="term-abbr">Example</div><div class="term-def">A free 2-day delivery banner is e-commerce. The stock placement and carrier SLAs behind it are SCM.</div></div></div></div>
+    </div>
+  </div>
+
+  <div id="dm-links" class="tab-panel">
+    <div class="info-box" style="border-left-color:var(--teal);margin-bottom:6px;">
+      <strong style="color:var(--teal);">ONE ORDER, START TO FINISH</strong>
+      Plan → Procure → Make → Ship in and clear customs → Warehouse and stock → Customer orders online → Pick and pack → Deliver → Return → the result feeds the next plan. Pick a domain to see what it receives and what it hands on.
+    </div>
+    <div class="leg-rail" id="dmRail">
+        <button class="leg-chip active" onclick="dmPick('plan',this)"><span class="cn">01</span>Planning</button>
+        <button class="leg-chip" onclick="dmPick('proc',this)"><span class="cn">02</span>Procurement</button>
+        <button class="leg-chip" onclick="dmPick('mfg',this)"><span class="cn">03</span>Manufacturing</button>
+        <button class="leg-chip" onclick="dmPick('inv',this)"><span class="cn">04</span>Inventory</button>
+        <button class="leg-chip" onclick="dmPick('wh',this)"><span class="cn">05</span>Warehousing</button>
+        <button class="leg-chip" onclick="dmPick('trans',this)"><span class="cn">06</span>Transportation</button>
+        <button class="leg-chip" onclick="dmPick('cust',this)"><span class="cn">07</span>Customs</button>
+        <button class="leg-chip" onclick="dmPick('ecom',this)"><span class="cn">08</span>E-commerce</button>
+        <button class="leg-chip" onclick="dmPick('ret',this)"><span class="cn">09</span>Returns</button>
+    </div>
+    <div class="leg-detail" id="dmOut"></div>
+    <div class="info-box" style="margin-top:16px;"><strong>WHERE LOGISTICS SITS</strong>Logistics is the middle of that chain: inventory, warehousing, transportation and (for cross-border) customs. Planning, procurement and manufacturing sit upstream of it; e-commerce and returns sit at the customer end.</div>
   </div>
 </section>
 
@@ -3919,7 +3994,7 @@ html{scroll-padding-top:72px;}
   <div class="section-header">
     <div class="section-eyebrow">Ready-to-Use</div>
     <div class="section-title">Document Templates</div>
-    <div class="section-sub">Professional SCM, logistics, and trade templates — preview and use as an on-screen reference. Content is provided for educational and professional reference.</div>
+    <div class="section-sub">Professional SCM, logistics, and trade templates — preview in-page and download for immediate use. Editable formats for real-world application.</div>
   </div>
 
   <div class="tabs" style="margin-bottom:32px;">
@@ -3943,6 +4018,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('commercial-invoice')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('commercial-invoice')">⬇ Download</button>
         </div>
       </div>
 
@@ -3955,6 +4031,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('packing-list')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('packing-list')">⬇ Download</button>
         </div>
       </div>
 
@@ -3967,6 +4044,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('ata-carnet')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('ata-carnet')">⬇ Download</button>
         </div>
       </div>
 
@@ -3979,6 +4057,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('certificate-origin')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('certificate-origin')">⬇ Download</button>
         </div>
       </div>
 
@@ -3991,6 +4070,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('letter-of-credit')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('letter-of-credit')">⬇ Download</button>
         </div>
       </div>
 
@@ -4003,6 +4083,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('import-declaration')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('import-declaration')">⬇ Download</button>
         </div>
       </div>
 
@@ -4022,6 +4103,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('bill-of-lading')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('bill-of-lading')">⬇ Download</button>
         </div>
       </div>
 
@@ -4034,6 +4116,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('air-waybill')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('air-waybill')">⬇ Download</button>
         </div>
       </div>
 
@@ -4046,6 +4129,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('pod')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('pod')">⬇ Download</button>
         </div>
       </div>
 
@@ -4058,6 +4142,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('freight-claim')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('freight-claim')">⬇ Download</button>
         </div>
       </div>
 
@@ -4070,6 +4155,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('asn')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('asn')">⬇ Download</button>
         </div>
       </div>
 
@@ -4089,6 +4175,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('grn')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('grn')">⬇ Download</button>
         </div>
       </div>
 
@@ -4101,6 +4188,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('cycle-count')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('cycle-count')">⬇ Download</button>
         </div>
       </div>
 
@@ -4113,6 +4201,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('rma')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('rma')">⬇ Download</button>
         </div>
       </div>
 
@@ -4125,6 +4214,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('discrepancy-report')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('discrepancy-report')">⬇ Download</button>
         </div>
       </div>
 
@@ -4144,6 +4234,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('sales-invoice')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('sales-invoice')">⬇ Download</button>
         </div>
       </div>
 
@@ -4156,6 +4247,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('purchase-order')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('purchase-order')">⬇ Download</button>
         </div>
       </div>
 
@@ -4168,6 +4260,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('quote')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('quote')">⬇ Download</button>
         </div>
       </div>
 
@@ -4187,6 +4280,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('case-study')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('case-study')">⬇ Download</button>
         </div>
       </div>
 
@@ -4199,6 +4293,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('supplier-scorecard')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('supplier-scorecard')">⬇ Download</button>
         </div>
       </div>
 
@@ -4211,6 +4306,7 @@ html{scroll-padding-top:72px;}
         </div>
         <div class="tmpl-card-footer">
           <button class="tmpl-btn-preview" onclick="previewTemplate('risk-register')">👁 Preview</button>
+          <button class="tmpl-btn-dl" onclick="downloadTemplate('risk-register')">⬇ Download</button>
         </div>
       </div>
 
@@ -4238,8 +4334,7 @@ html{scroll-padding-top:72px;}
   <div class="footer-logo">⬡ SCM ATLAS</div>
   <div class="footer-text">Free supply chain education for everyone · Built with ❤️ for the SCM community</div>
   <div class="footer-text" style="font-family:var(--mono);font-size:11px;color:var(--text3);">v1.0 · 2025 · Created by <span style="color:var(--amber);">Harsha Kalluri</span></div>
-  <div class="footer-text" style="font-family:var(--mono);font-size:11px;color:var(--text3);margin-top:6px;">© 2025–2026 <strong style="color:var(--amber);">Harsha Kalluri</strong> · SCM Atlas is an original work. Unauthorized copying, reproduction, redistribution, or derivative use is prohibited.</div>
-<div class="footer-text" style="font-family:var(--mono);font-size:11px;"><a href="https://www.linkedin.com/in/harsha-kalluri/" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:none;">Connect with Harsha Kalluri on LinkedIn ↗</a></div>
+  <div class="footer-text" style="font-family:var(--mono);font-size:11px;color:var(--text3);margin-top:6px;">© 2025–2026 Harsha Kalluri. All Rights Reserved. Unauthorized copying, reproduction, or redistribution of this content is prohibited.</div>
 </footer>
 
 <!-- MODAL OVERLAY -->
@@ -5519,6 +5614,12 @@ document.querySelectorAll('.module-card, .case-card, .cheat-card, .kpi-card').fo
 <script>
 /* ─── ASK THE ATLAS — client-side keyword FAQ bot (no external calls) ─── */
 const atlasKB = [
+  {kw:['scm vs logistics','logistics vs supply chain','supply chain vs logistics','difference between scm and logistics','difference between logistics and supply chain'],title:'SCM vs Logistics',tag:'Compare',a:'SCM is the whole system: planning, sourcing, making, delivering and returning. Logistics is one part of it: moving and storing goods between origin and consumption. SCM decides, logistics carries out.'},
+  {kw:['logistics vs transportation','difference between logistics and transportation'],title:'Logistics vs Transportation',tag:'Compare',a:'Transportation is only the movement (mode, carrier, route). Logistics adds warehousing, inventory positioning, packaging and information. Every transport decision is a logistics decision, not the reverse.'},
+  {kw:['warehouse vs inventory','warehousing vs inventory','difference between warehouse and inventory'],title:'Warehousing vs Inventory',tag:'Compare',a:'Warehousing is the place and its operations (receive, store, pick, pack, ship). Inventory management is the stock itself: how much, when to reorder, what is ageing. Warehouse = where, inventory = what and how much.'},
+  {kw:['warehouse vs distribution','distribution centre vs','distribution center vs','fulfilment centre','fulfillment center','cross dock vs'],title:'Warehouse vs DC vs Fulfilment Centre',tag:'Compare',a:'Warehouse: general storage. Distribution centre: high-throughput consolidation shipping pallets and cases. Fulfilment centre: built for single customer orders, typical for e-commerce. Cross-dock: no storage, inbound moves straight to outbound.'},
+  {kw:['ecommerce vs scm','e-commerce vs scm','ecommerce vs supply chain','difference between ecommerce and supply chain'],title:'E-commerce vs SCM',tag:'Compare',a:'E-commerce is a sales channel that creates and captures demand. SCM is the engine that must deliver what checkout promised. E-commerce makes the promise, SCM keeps it.'},
+  {kw:['how are they connected','how are logistics and warehouse connected','supply chain functions connected','interlinked','how do scm and logistics connect'],title:'How the Functions Connect',tag:'Compare',a:'Planning drives procurement and manufacturing; goods flow into inventory and the warehouse; transportation and customs move them onward; e-commerce orders trigger picking; returns loop back into stock and the next plan. See the Compare section, How They Connect tab.'},
   {kw:['lean','waste','muda'],title:'Lean',tag:'Methodology',a:'Lean is a philosophy from the Toyota Production System: relentlessly remove anything that does not add value for the customer, so work flows faster and cheaper. Core tools: VSM, 5S, Kanban, Poka-Yoke.'},
   {kw:['six sigma','sigma','dmaic','defects per million'],title:'Six Sigma',tag:'Methodology',a:'Six Sigma is a statistical method for cutting variation and defects until output is almost perfectly consistent (3.4 defects per million opportunities). It runs on the DMAIC cycle: Define, Measure, Analyze, Improve, Control.'},
   {kw:['lean six sigma'],title:'Lean Six Sigma',tag:'Methodology',a:'The combination of Lean (removing waste) and Six Sigma (removing variation) in one initiative — the default choice when a process is both slow and unreliable.'},
@@ -5803,7 +5904,16 @@ function closeTmplPreview(){
   document.body.style.overflow='';
 }
 function closeTmplOutside(e){if(e.target===document.getElementById('tmplOverlay'))closeTmplPreview();}
-function downloadTemplate(id){ console.warn("SCM Atlas templates are view-only."); }
+function downloadTemplate(id){
+  const t=templates[id];if(!t)return;
+  const css=`*{margin:0;padding:0;box-sizing:border-box;}body{font-family:'Barlow',sans-serif;font-size:13px;color:#222;background:#fff;padding:40px 48px;max-width:900px;margin:0 auto;line-height:1.6;}h1{font-size:22px;font-weight:700;margin-bottom:4px;color:#111;}h2{font-size:13px;font-weight:700;margin:20px 0 8px;color:#111;text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid #f5a623;padding-bottom:4px;}h3{font-size:12px;font-weight:700;margin:12px 0 4px;color:#333;}p{margin-bottom:8px;color:#444;}table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px;}th{background:#0a0e1a;color:#f5a623;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:8px 10px;text-align:left;}td{padding:7px 10px;border-bottom:1px solid #e8e8e8;color:#444;vertical-align:top;}tr:nth-child(even) td{background:#f9f9f9;}.doc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;padding-bottom:20px;border-bottom:3px solid #0a0e1a;}.doc-logo{font-size:20px;font-weight:700;color:#0a0e1a;font-family:monospace;}.doc-meta{text-align:right;font-size:12px;color:#666;}.doc-meta strong{color:#111;display:block;font-size:14px;}.field-row{display:flex;gap:8px;margin-bottom:6px;align-items:baseline;}.field-label{font-weight:700;color:#555;font-size:11px;text-transform:uppercase;letter-spacing:.05em;min-width:140px;}.field-val{color:#222;border-bottom:1px solid #ddd;flex:1;padding-bottom:2px;}.field-val.blank{color:#aaa;font-style:italic;}.section-box{background:#f5f7fa;border:1px solid #e0e4ec;border-radius:4px;padding:14px 16px;margin:10px 0;}.sign-row{display:flex;gap:32px;margin-top:32px;}.sign-block{flex:1;border-top:1px solid #333;padding-top:8px;font-size:11px;color:#666;}.highlight-box{background:#fff8e6;border:1px solid #f5a623;border-left:4px solid #f5a623;padding:10px 14px;margin:10px 0;font-size:12px;}.badge{display:inline-block;background:#0a0e1a;color:#f5a623;font-size:10px;padding:2px 8px;border-radius:2px;font-family:monospace;letter-spacing:.06em;margin-bottom:4px;}.footer{margin-top:40px;padding-top:16px;border-top:1px solid #e0e4ec;font-size:10px;color:#aaa;text-align:center;}@media print{body{padding:20px;}}`;
+  const html=`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><title>${t.title} — SCM Atlas</title><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet"/><style>${css}</style></head><body>${t.html}<div class="footer">SCM Atlas Template · ${t.title} · Free for educational and professional use · Created by Harsha Kalluri</div></body></html>`;
+  const b=new Blob([html],{type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(b);
+  a.download='scm-atlas-'+id+'.html';
+  a.click();URL.revokeObjectURL(a.href);
+}
 
 /* ===== TRANSPORT BLOCKS 2-5 — INTERACTIVITY ===== */
 function toggleAcc(el){ el.parentElement.classList.toggle('open'); }
@@ -6079,4 +6189,26 @@ document.addEventListener('DOMContentLoaded', function(){
   calcMRP();
 });
 
+</script>
+
+<script>
+/* Compare & Connect: interlink selector */
+const DM={
+plan:['Planning (S&amp;OP)','Turns demand signals into the buy, make and move plan.',[['E-commerce / orders','actual demand and promotions replace the forecast'],['Inventory','on-hand stock and sales history']],[['Procurement','what to buy, how much, by when'],['Manufacturing','the production schedule'],['Warehousing / Transport','volume and capacity forecasts']]],
+proc:['Procurement &amp; Sourcing','Buys what the plan needs, from suppliers it has qualified.',[['Planning','purchase requirements'],['Returns','defect claims and return-to-vendor']],[['Manufacturing / Inventory','materials and stock arrive against POs'],['Transportation','Incoterms decide who books and pays freight'],['Customs','commercial invoice, HS code, origin']]],
+mfg:['Manufacturing','Converts materials into finished goods.',[['Procurement','materials on time and to spec'],['Planning','the production schedule']],[['Inventory / Warehousing','finished goods and production receipts']]],
+inv:['Inventory Management','Tracks how much stock exists, of what, and where.',[['Procurement / Manufacturing','goods received into stock'],['Warehousing','every receipt, pick and adjustment updates on-hand'],['Returns','restocked units become sellable again']],[['E-commerce / orders','available-to-promise: what can be sold'],['Planning','stock position drives replenishment']]],
+wh:['Warehousing','Physically receives, stores, picks, packs and dispatches.',[['Procurement / Manufacturing','goods with ASN and PO'],['Customs','cleared imports released to the dock'],['E-commerce','pick-and-ship instructions'],['Returns','returned goods to inspect']],[['Transportation','packed, labelled goods and manifest'],['Inventory','live stock updates']]],
+trans:['Transportation','Moves goods between points by the chosen mode and carrier.',[['Warehousing','packed goods and delivery note'],['Procurement','Incoterm and booking terms']],[['Customs','carrier documents (B/L, AWB) support the declaration'],['E-commerce / customer','tracking events and proof of delivery'],['Returns','the reverse pickup leg']]],
+cust:['Customs &amp; Trade Compliance','Clears cross-border goods legally and settles duty.',[['Transportation','carrier documents and arrival notice'],['Procurement','invoice, origin and HS code']],[['Warehousing / Transportation','cleared goods released for onward delivery']]],
+ecom:['E-commerce','The sales channel where customer demand is created and captured.',[['Inventory','available stock to display'],['Transportation','delivery options and tracking']],[['Warehousing (fulfilment)','orders, payment, delivery address'],['Planning','demand spikes and promotions'],['Returns','return requests']]],
+ret:['Returns (Reverse Logistics)','Handles goods flowing back from the customer.',[['E-commerce','return request and refund trigger'],['Transportation','return pickup']],[['Warehousing / Inventory','inspect, then restock, refurbish or scrap'],['Procurement','supplier claims for defects']]]
+};
+function dmPick(k,btn){
+  const d=DM[k]; if(!d) return;
+  if(btn){btn.parentElement.querySelectorAll('.leg-chip').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+  const li=a=>a.map(x=>'<li><strong>'+x[0]+'</strong> — '+x[1]+'</li>').join('');
+  document.getElementById('dmOut').innerHTML='<div class="leg-meta">Role in the chain</div><h4>'+d[0]+'</h4><p>'+d[1]+'</p><div class="dm-lists"><div><div class="k">Receives from</div><ul>'+li(d[2])+'</ul></div><div><div class="k">Sends to</div><ul>'+li(d[3])+'</ul></div></div>';
+}
+dmPick('plan');
 </script>
